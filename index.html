@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bate Papo Uol</title>
+</head>
+<body>
+    <div class="top">
+        <img src="./imagens/logo 1.png">
+        <ion-icon name="people" onclick="abrirSidebar()"></ion-icon>
+    </div>
+
+    <div class="chat">
+        <span class="entrou-saiu"><h1 class="time">(09:21:45)</h1>João  entra na sala...</span>
+        <span class="msg-publica"><h1 class="time">(09:21:45)</h1>João para Todos:  Bom dia</span>
+        <span class="msg-publica"><h1 class="time">(09:21:45)</h1>Maria para João:  Oi João :)</span>
+        <span class="msg-privada"><h1 class="time">(09:21:45)</h1>João reservadamente para Maria:  Oi gatinha quer tc?</span>
+        <span class="entrou-saiu"><h1 class="time">(09:21:45)</h1>Maria  sai da sala...</span>
+    </div>
+
+    <div class="bot">
+        <input type="text" value="Escreva Aqui..." onclick="escreverMensagem(this)">
+
+        <ion-icon name="paper-plane-outline"></ion-icon>
+    </div>
+
+    <div class="sidebar">
+        <h1>Escolha um contato para enviar mensagem:</h1>
+
+
+        <ul class="contatos">
+            <li><ion-icon name="people"></ion-icon>Todos</li>
+            <li><ion-icon name="person-circle"></ion-icon>João</li>
+            <li><ion-icon name="person-circle"></ion-icon>Maria</li>
+        </ul>
+
+
+        <h1>Escolha a visibilidade:</h1>
+        <span>
+            <ion-icon name="lock-open"></ion-icon>
+            Público
+        </span>
+        <span>
+            <ion-icon name="lock-closed"></ion-icon>
+            Reservadamente
+        </span>
+
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
