@@ -45,10 +45,23 @@ body {
     right: 0;
 }
 
-.bot input {
+.bot textarea {
     border: none;
-    width: 145px;
+    width: 200px;
     height: 30px;
+    outline: none;
+    resize: none;
+    color: black;
+    overflow-y: auto;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.bot p{
+    color: #505050;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .bot ion-icon{
@@ -72,6 +85,7 @@ body {
     background-color: #DCDCDC;
     display: flex;
     align-items: center;
+    margin-bottom: 2px;
 }
 
 .chat .msg-publica {
@@ -80,6 +94,8 @@ body {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
+    margin-bottom: 2px;
+    overflow-x: auto;
 }
 
 .chat .msg-privada {
@@ -88,6 +104,8 @@ body {
     background-color: #FFDEDE;
     display: flex;
     align-items: center;
+    margin-bottom: 2px;
+    overflow-x: auto;
 }
 
 .chat .time {
@@ -129,7 +147,7 @@ body {
     margin-bottom: 30px;
 }
 
-li{
+.contatos li{
     display: flex;
     align-items: center;
     margin: 10px 25px;  
@@ -152,9 +170,6 @@ span ion-icon{
     font-size: 16px;
     font-weight: 400; 
     color: black; 
-    display: flex;
-    align-items: center;
-    margin: 10px 25px;
 }
 
 .mostrar-sidebar{
@@ -163,4 +178,22 @@ span ion-icon{
 
 .opaco {
     opacity: 0.4;
+}
+
+.publico, .reservado {
+    display: flex;
+    align-items: center;
+    margin: 10px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.green {
+    color: green;
+}
+
+strong {
+    font-weight: bold;
 }

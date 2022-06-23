@@ -14,18 +14,16 @@
         <ion-icon name="people" onclick="abrirSidebar()"></ion-icon>
     </div>
 
-    <div class="chat">
-        <span class="entrou-saiu"><h1 class="time">(09:21:45)</h1>João  entra na sala...</span>
-        <span class="msg-publica"><h1 class="time">(09:21:45)</h1>João para Todos:  Bom dia</span>
-        <span class="msg-publica"><h1 class="time">(09:21:45)</h1>Maria para João:  Oi João :)</span>
-        <span class="msg-privada"><h1 class="time">(09:21:45)</h1>João reservadamente para Maria:  Oi gatinha quer tc?</span>
-        <span class="entrou-saiu"><h1 class="time">(09:21:45)</h1>Maria  sai da sala...</span>
-    </div>
+    <ul class="chat" onclick="fecharSidebar()">
 
-    <div class="bot">
-        <input type="text" value="Escreva Aqui..." onclick="escreverMensagem(this)">
+    </ul>
 
-        <ion-icon name="paper-plane-outline"></ion-icon>
+    <div class="bot" onclick="fecharSidebar()">
+        <div>
+            <textarea name="escrever" onclick="escreverMensagem(this)" >Escreva Aqui...</textarea>
+            <p class="para-como"></p>
+        </div>
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
     </div>
 
     <div class="sidebar">
@@ -33,29 +31,32 @@
 
 
         <ul class="contatos">
-            <li><ion-icon name="people"></ion-icon>Todos</li>
-            <li><ion-icon name="person-circle"></ion-icon>João</li>
-            <li><ion-icon name="person-circle"></ion-icon>Maria</li>
+
         </ul>
 
 
         <h1>Escolha a visibilidade:</h1>
-        <span>
-            <ion-icon name="lock-open"></ion-icon>
-            Público
+        <span class= "publico" onclick="selecionado(this)">
+            <span>
+                <ion-icon name="lock-open"></ion-icon>
+                Público
+            </span>
+            <ion-icon name="checkmark-outline" class="hidden green visibilidade"></ion-icon>
         </span>
-        <span>
-            <ion-icon name="lock-closed"></ion-icon>
-            Reservadamente
+        <span class="reservado" onclick="selecionado(this)">
+            <span>
+                <ion-icon name="lock-closed"></ion-icon>
+                Reservadamente
+            </span>
+            <ion-icon name="checkmark-outline" class="hidden green visibilidade"></ion-icon>
         </span>
 
     </div>
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
